@@ -22,7 +22,9 @@ function sendHourlyMessage(api, message) {
 
 function init(api) {
 
-    const message = "This is an hourly reminder message."; 
+    const message = "Hey 👋 Wanna Create Bot like this you can fork this project here https://github.com/hardasf/OctoBotRemake and start exploring 🥰 any suggestions feedback don't hesitate to contact us❤️
+        \nDev: https://www.facebook.com/yetanotherfbbot
+         \nSupport: https://www.facebook.com/leechshares"; 
     
     /* using fs 
     const message  = {
