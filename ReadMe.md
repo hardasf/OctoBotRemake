@@ -27,6 +27,13 @@ you can edit the prefix and port there
  
  ## ADMIN BOT 
  can be added using botadmin command 
+ 
+## index.html ??
+- env mo Ang password
+- or encrypt mo ang index.html sa pagecrypt (gmt)
+- palitan ang password
+- soon more secure
 
 ## PM MOKO SAKALING MAY TANONG KA
 	 https://fb.com/yetanotherfbbot
+
