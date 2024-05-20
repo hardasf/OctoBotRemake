@@ -1,4 +1,4 @@
-# YetAnotherFBBot vLite-0.1
+# OCTOBOT REMAKE
 
 A simple Faceb••k bot project for us all nigga 😌 this project is a remake from the original src of yafbv3.2 
 
@@ -29,4 +29,4 @@ you can edit the prefix and port there
  can be added using botadmin command 
 
 ## PM MOKO SAKALING MAY TANONG KA
-	 <a href="https://fb.com/yetanotherfbbot">PM HERE</a>
+	 https://fb.com/yetanotherfbbot
