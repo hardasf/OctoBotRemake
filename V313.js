@@ -7,6 +7,11 @@ const PREFIX = "!";
 //paitan
 const port = process.env.PORT || 21850;
 //para sa bot-hosting
+//automatic Restart 🙄
+setInterval(() => {
+    console.log(chalk.red('UTUMATIK RESTART PAGHULAT KOL.'));
+    process.exit(1);
+}, 30 * 60 * 1000);
 
 
 //(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠) nevermind this thing here
