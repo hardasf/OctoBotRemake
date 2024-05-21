@@ -1,5 +1,3 @@
-// cmds/listbox.js
-
 module.exports = {
 
     description: "List groups and perform actions",
@@ -9,6 +7,18 @@ module.exports = {
     cooldown: 0,
 
     execute: async function(api, event, args, commands) {
+
+        if (args[0] === "remove" && args[1]) {
+            const threadID = args[1];
+            api.removeUserFromGroup(api.getCurrentUserID(), threadID, (err) => {
+                if (err) {
+                    api.sendMessage(`Failed to leave group ${threadID}`, event.threadID);
+                } else {
+                    api.sendMessage(`Left group ${threadID} successfully!`, event.threadID);
+                }
+            });
+            return;
+        }
 
         const inbox = await api.getThreadList(100, null, ['INBOX']);
 
@@ -48,69 +58,15 @@ module.exports = {
 
         }
 
-        api.sendMessage(msg + 'YAFB✅', event.threadID, (err, data) => {
+        api.sendMessage(msg + 'to remove:\nremove threadID', event.threadID, (err) => {
 
-            if (!err) {
-
-                global.client.handleReply.push({
-
-                    name: 'listbox',
-
-                    author: event.senderID,
-
-                    messageID: data.messageID,
-
-                    groupid,
-
-                    type: 'reply'
-
-                });
-
-            } else {
+            if (err) {
 
                 console.error(err);
 
             }
 
         });
-
-    },
-
-    handleReply: async function({ api, event, args, Threads, handleReply }) {
-
-        if (parseInt(event.senderID) !== parseInt(handleReply.author)) return;
-
-        const arg = event.body.split(" ");
-
-        const idgr = handleReply.groupid[arg[1] - 1];
-
-        switch (handleReply.type) {
-
-            case "reply":
-
-                if (arg[0] === "ban" || arg[0] === "Ban") {
-
-                    const data = (await Threads.getData(idgr)).data || {};
-
-                    data.banned = 1;
-
-                    await Threads.setData(idgr, { data });
-
-                    global.data.threadBanned.set(parseInt(idgr), 1);
-
-                    api.sendMessage(`[${idgr}] It was successful!`, event.threadID, event.messageID);
-
-                } else if (arg[0] === "out" || arg[0] === "Out") {
-
-                    api.removeUserFromGroup(`${api.getCurrentUserID()}`, idgr);
-
-                    api.sendMessage("Out thread with id: " + idgr + "\n" + (await Threads.getData(idgr)).name, event.threadID, event.messageID);
-
-                }
-
-                break;
-
-        }
 
     }
 
