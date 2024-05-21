@@ -34,6 +34,9 @@ you can edit the prefix and port there
 - palitan ang password
 - soon more secure
 
+## how to upload using WebView (HTML)
+lagay mo ang appstate sa cookie.json bago mo iuupload sa  website mo
+
 ## PM MOKO SAKALING MAY TANONG KA
 	 https://fb.com/yetanotherfbbot
 
