@@ -17,22 +17,14 @@ node index.js
 GO TO yafb_conf.json 
 to login the key 🥴
 
-## SOME SHITS HERE
-GO TO V313.js
-you can edit the prefix and port there
-
-## ADMIN DATABASE 
- insert your UID at database/admin.json
- add manually temporary lang next time sa dashboard na
+## SOME SHITS HERE @ config.json
+u can edit/add configuration there including prefix, port and admin😗 as well as password of dashboard 
  
  ## ADMIN BOT 
  can be added using botadmin command 
  
 ## index.html ??
-- env mo Ang password
-- or encrypt mo ang index.html sa pagecrypt (gmt)
-- palitan ang password
-- soon more secure
+- if i where u don't share this shit
 
 ## how to upload using WebView (HTML)
 lagay mo ang appstate sa cookie.json bago mo iuupload sa  website mo
