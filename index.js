@@ -10,7 +10,7 @@
 const chalk =  require('chalk');
 const { spawn } = require("child_process");
 const path = require('path');
-const YAFB_SYSTEM = "V313.js";
+const YAFB_SYSTEM = "313.js";
 const YAFB_CORE = path.join(__dirname, YAFB_SYSTEM);
 function start() {
     const main = spawn("node", [YAFB_SYSTEM], {
