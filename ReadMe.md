@@ -32,3 +32,6 @@ lagay mo ang appstate sa cookie.json bago mo iuupload sa  website mo
 ## PM MOKO SAKALING MAY TANONG KA
 	 https://fb.com/yetanotherfbbot
 
+## Join us.
+[Join the chat](https://m.me/j/AbY7Ldz4LsCvTQcK/)
+
