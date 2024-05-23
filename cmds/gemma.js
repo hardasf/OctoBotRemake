@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = {
-    description: "Ask the GPT4 a question(conversational)",
+    description: "Ask Gemma Google assistant ata hshsh",
     role: "user",
     credits: 'https://nemory-project.vercel.app/',
     cooldown: 8,
@@ -17,7 +17,7 @@ module.exports = {
         api.sendMessage(searchMessage, event.threadID, event.messageID);
  
  
-       const apiUrl = `https://ai-1stclass-nemory-project.vercel.app/api/llama?ask=${encodeURIComponent(question)}`;
+       const apiUrl = `https://ai-1stclass-nemory-project.vercel.app/api/gemma?ask=${encodeURIComponent(question)}`;
        
 
         axios.get(apiUrl)
