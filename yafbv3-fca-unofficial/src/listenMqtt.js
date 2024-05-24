@@ -1,6 +1,7 @@
 /* eslint-disable no-redeclare */
 "use strict";
 const utils = require("../utils");
+const chalk  = require('chalk');
 const log = require("npmlog");
 const mqtt = require('mqtt');
 const websocket = require('websocket-stream');
@@ -102,29 +103,33 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
   ctx.mqttClient = new mqtt.Client(_ => websocket(host, options.wsOptions), options);
 
   const mqttClient = ctx.mqttClient;
+/*
+ *FIX BY REJARDGWAPO 
+*/
+mqttClient.on('error', function (err) {
+  //log.error("listenMqtt", err);
+  mqttClient.end();
+  if (ctx.globalOptions.autoReconnect) {
+    listenMqtt(defaultFuncs, api, ctx, globalCallback);
+  } else {
+    utils.checkLiveCookie(ctx, defaultFuncs)
+      .then(res => {
+        globalCallback({
+          type: "stop_listen",
+          error: "Connection refused: Server unavailable"
+        }, null);
+      })
+      .catch(err => {
+        globalCallback({
+          type: "account_inactive",
+          error: "OPEN YOUR BOT ON KIWI BROWSER AND DISMISS THE CHECKPOINT"
+        }, null);
+      });
+  }
+  console.log(chalk.red('OPEN FACEBOOK IN KIWI BROWSER AND DISMISS THE CHECKPOINT'));
+process.exit(1);
 
-  mqttClient.on('error', function (err) {
-    log.error("listenMqtt", err);
-    mqttClient.end();
-    if (ctx.globalOptions.autoReconnect) {
-      listenMqtt(defaultFuncs, api, ctx, globalCallback);
-    } else {
-      utils.checkLiveCookie(ctx, defaultFuncs)
-        .then(res => {
-          globalCallback({
-            type: "stop_listen",
-            error: "Connection refused: Server unavailable"
-          }, null);
-        })
-        .catch(err => {
-          globalCallback({
-            type: "account_inactive",
-            error: "Maybe your account is blocked by facebook, please login and check at https://facebook.com"
-          }, null);
-        });
-    }
-  });
-
+});
   mqttClient.on('close', function () {
 
   });
