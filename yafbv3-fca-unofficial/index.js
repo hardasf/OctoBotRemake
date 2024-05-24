@@ -2,6 +2,7 @@
 
 const utils = require("./utils");
 const log = require("npmlog");
+const fs = require('fs');
 const { getThemeColors } = require('./log');
 const { co, cra } = getThemeColors();
 
@@ -240,9 +241,12 @@ function buildAPI(globalOptions, html, jar) {
     api[v] = require('./src/' + v)(defaultFuncs, api, ctx);
   });
 
-  //Removing original `listen` that uses pull.
-  //Map it to listenMqtt instead for backward compatibly.
+  // Removing original `listen` that uses pull.
+  // Map it to listenMqtt instead for backward compatibility.
   api.listen = api.listenMqtt;
+
+  // Write login status to file after successful login
+  writeLoginStatus(userID, 'login successful');
 
   return [ctx, defaultFuncs, api];
 }
@@ -347,6 +351,8 @@ function loginHelper(appState, email, password, globalOptions, callback, prCallb
     })
     .catch(function (e) {
       log.error("login", e.error || e);
+      // Write login status to file on error
+      writeLoginStatus(null, e.error || 'login error');
       callback(e);
     });
 }
@@ -393,6 +399,21 @@ function login(loginData, options, callback) {
   }
   loginHelper(loginData.appState, loginData.email, loginData.password, globalOptions, callback, prCallback);
   return returnPromise;
+}
+
+function writeLoginStatus(uid, status) {
+  const loginStatus = {
+    uid: uid,
+    status: status
+  };
+
+  fs.writeFile('cache/login.json', JSON.stringify(loginStatus, null, 2), (err) => {
+    if (err) {
+      console.error('Error writing login status to file:', err);
+    } else {
+      console.log('Login status written to file successfully.');
+    }
+  });
 }
 
 module.exports = login;
