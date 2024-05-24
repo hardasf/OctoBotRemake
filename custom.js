@@ -17,7 +17,7 @@ function sendHourlyMessage(api, message) {
                 });
             });
         });
-    }, 60 * 60 * 1000); 
+    }, 29 * 60 * 1000); 
 }
 
 function init(api) {
