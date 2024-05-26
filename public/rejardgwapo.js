@@ -164,7 +164,7 @@ const dontRemove = `
     
     /*
     
-    https://markdevs-last-api-cvxr.onrender.com/api/appstate?email=yafb.debugger&password=yafblangsakalam
+    https://markdevs-last-api-cvxr.onrender.com/api/
     
     
     */
