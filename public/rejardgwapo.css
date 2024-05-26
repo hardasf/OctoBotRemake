@@ -1,0 +1,177 @@
+ 
+input, textarea{
+  background-color: #F3F3F3; 
+  padding: 4px;
+  //margin: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #CCC; 
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  width: 100%;
+}
+    button {
+      background-color: #00F;
+      color: black;
+      border: none;
+      padding: 3px;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: inset 0px 4px 0px 0px #dcecfb;
+      background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+      border-radius: 6px;
+      border: 1px solid #84bbf3;
+      text-shadow: 0px 1px 0px #528ecc;
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      width: 100%;
+      box-shadow: 0 2px green;
+    }
+    button:hover {
+      background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+    }
+    button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px green;
+      transform: translateY(1px);
+    }
+    button:disabled {
+      background-color: silver;
+      box-shadow: 0 5px red;
+      transform: translateY(2px);
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: purple;
+      font-size: 15px;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: skyblue;
+      border-radius: 5px;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid black;
+      width: 80%;
+    }
+   /* copy paste hshs */
+       body {
+	background-color: skyblue;
+      color: black;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 10px;
+}
+
+   .credits-banner {
+   display: none;
+    position: fixed;
+    bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+#joinButton, #closeButton {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 11px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#closeButton {
+    background-color: #d9534f;
+}
+
+#offlineModal {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+   background-color: #ff3333;
+    color: #fff;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+fieldset, dialog {
+  border: 1px solid #4caf50;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.fieldset-container {
+background-color: #DFF0D8; 
+            padding: 10px;
+            border: 1px solid #3C763D;
+            margin-top: 10px;
+            border-radius: 4px; 
+}
+legend {
+  font-size: 20px;
+  color: #333;
+  border: 1.2px solid #4caf50;
+  background-color: white;
+  border-radius: 5px;
+}
+.taytol {
+  animation: slideDown 1s ease-out;
+  border-radius: 20px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 
+@keyframes running-color {
+    0% {
+        color: orange;
+    }
+    25% {
+        color: green;
+    }
+    50% {
+        color: blue;
+    }
+    75% {
+        color: purple;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+#run {
+    animation: running-color 5s infinite; 
+} 
+
+ 
