@@ -29,6 +29,8 @@ u can edit/add configuration there including prefix, port and admin😗 as well 
 ## how to upload using WebView (HTML)
 lagay mo ang appstate sa cookie.json bago mo iuupload sa  website mo
 
+## for Security 
+i added WEBVIEW on Config json pRa yun only sa WebView lang maacess yung api
 ## PM MOKO SAKALING MAY TANONG KA
 	 https://fb.com/yetanotherfbbot
 
