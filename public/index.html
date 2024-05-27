@@ -3,20 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🐙 OctoBotRemake</title>
-  <link rel="stylesheet" href="rejardgwapo.css">
+  <title>🐙 OctoBot</title>
+  <link rel= "stylesheet" href="rejardgwapo.css"></link>
+  <style>
+  /*
+  body {
+      background-color: #000;
+      color: #0F0;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 10px;
+    }
+    h1, h2, label {
+      color: #0F0;
+    }
+    input {
+      background-color: #000;
+      color: #0F0;
+      border-radius: 4px;
+      border: 1px solid #0F0;
+      padding: 5px;
+      margin: 5px 0;
+      width: 95%;
+    }
+    button {
+      background-color: #00F;
+      color: black;
+      border: none;
+      padding: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: inset 0px 4px 0px 0px #dcecfb;
+      background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+      border-radius: 6px;
+      border: 1px solid #84bbf3;
+      text-shadow: 0px 1px 0px #528ecc;
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px green;
+    }
+    button:hover {
+      background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+    }
+    button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px green;
+      transform: translateY(1px);
+    }
+    button:disabled {
+      background-color: silver;
+      box-shadow: 0 5px red;
+      transform: translateY(2px);
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    fieldset {
+      border: 1px solid green;
+      border-radius: 5px;
+    }
+    legend {
+      font-size: 20px;
+      color: #0F0;
+      border: 1.2px solid green;
+      border-radius: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: orange;
+      font-size: 15px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: black;
+      border-radius: 5px;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid lime;
+      width: 80%;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      }
+      */
+  </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
-<div  class="taytol">
-  <h1 id="run">🐙 OctoBotRMKE</h1>
-  </div>
+  <h1>🐙 OctoBotv1</h1>
   <details open>
     <summary>About:</summary>
-    <p>OctoBotRemake is a bot module created and maintained by <a href="https://www.facebook.com/rejardbentazarofficial">Rejard Bentazar</a>...</p>
+    <p>OctoBot is a bot module created and maintained by <a href="https://www.facebook.com/rejardbentazarofficial">Rejard Bentazar</a>...</p>
   </details>
   <br>
-   <div class="fieldset-container">
+    <div class="fieldset-container">
   <fieldset>
   <legend><b>🌟Status</b></legend>
     <div id="login-status"></div>
@@ -26,17 +120,7 @@
     </details>
     </fieldset>
     </div>
-    <br>
-     <div class="fieldset-container">
-    <fieldset>
-    <legend><b>🍪Update Cookie<t style="font-size:6px">via Login</t></b></legend>
-    <label> Input your Credentials </label>
-    <input type="text" id="usernameInput" placeholder="Username">
-<input type="password" id="passwordInput" placeholder="Password">
-<button onclick="myOten()">Login</button>
-    </fieldset>
-    </div>
-    <br>
+  <br>
      <div class="fieldset-container">
     <fieldset>
     <legend><b>🍪Update Cookie<t style="font-size:6px">via paste</t></b></legend>
@@ -44,11 +128,11 @@
    <textarea id="jsonTextarea" rows="5" cols="30"></textarea>
 <button onclick="uploadJsonCookies()">Update Cookie</button>
 </fieldset>
-</div>
+     </div>
   <br>
-   <div class="fieldset-container">
+    <div class="fieldset-container">
   <fieldset>
-    <legend><b>🍪Update Cookie<t style="font-size:6px">via upload</t></b></legend>
+    <legend><b>🍪Update Cookie</b></legend>
     <form id="uploadForm" enctype="multipart/form-data">
       <label for="cookieFile">Select a cookie file (JSON):</label>
       <input type="file" id="cookieFile" name="cookieFile" required>
@@ -59,54 +143,171 @@
       <p>This Feature will automatically update your OctoBOT_Appstate</p>
       <p> you have to upload config.json with your appstate inside gets pag dipa talon ka sa building</p>
     </details>
+    <br>
     </fieldset>
     </div>
     <br>
     <div class="fieldset-container">
   <fieldset>
     <legend><b style="color:red">🍪 Logout Cookie</b></legend>
-    <label>Logout Your Appstate </label>
     <button onclick="logoutCookie()" style="color:red">Logout Cookie</button>
   </fieldset>
-  </div>
+    </div>
   <br>
-  <!--Hi Rejard is Here (⁠ ⁠ꈍ⁠ᴗ⁠ꈍ⁠) -->
-  <div  id="DONT_REMOVE"></div>
-  <!-- tulong tulong Tayo Join na -->
-    
+    <div class="fieldset-container">
+    <fieldset>
+    <legend><b>🍪Update Cookie<t style="font-size:6px">via Login</t></b></legend>
+    <label> Input your Credentials </label>
+    <input type="text" id="usernameInput" placeholder="Username">
+<input type="password" id="bilatInput" placeholder="Password">
+<button onclick="myOten()">Login</button>
+    </fieldset>
+    </div>
+    <br>
   <center>
     <p>©Rejard2024</p>
   </center>
-  <div id="passwordModal"  class="modal">
+  <div id="passwordModal" class="modal">
     <div class="modal-content">
       <p>Enter the password:</p>
       <input type="password" id="passwordInput">
       <button onclick="checkPassword()">Submit</button>
-    <h3> Ping: <b  id=""></b></h3>
-      <p style="color:yellow"> Sauce... <br> <a href="https://github.com/hardasf/OctoBotRemake">git:OctoBotRemake</a></p>
-   
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-  <script src="rejardgwapo.js"></script>
-<script>
-//ano to ping..
-function measurePing() {
-  var xhr = new XMLHttpRequest();
-  var startTime, endTime;
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      endTime = Date.now();
-      var pingTime = endTime - startTime;
-      document.getElementById("ping").textContent = pingTime + " ms";
+  <script>
+    async function uploadCookies() {
+      const form = document.getElementById('uploadForm');
+      const formData = new FormData(form);
+      try {
+        const response = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+          Swal.fire('Success', result.message, 'success');
+        } else {
+          Swal.fire('Error', result.message, 'error');
+        }
+      } catch (error) {
+        Swal.fire('Error', 'An error occurred while uploading cookies.', 'error');
+      }
     }
-  };
-  xhr.open("GET", location.href + "?t=" + new Date().getTime());
-  startTime = Date.now();
-  xhr.send();
+
+    async function logoutCookie() {
+      const formData = new FormData();
+      const emptyCookie = new Blob(['[]'], { type: 'application/json' });
+      formData.append('cookieFile', emptyCookie, 'cookie.json');
+
+      try {
+        const response = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+          Swal.fire('Success', 'LOGOUT SUCCESSFULLY', 'success');
+        } else {
+          Swal.fire('Error', result.message, 'error');
+        }
+      } catch (error) {
+        Swal.fire('Error', 'An error occurred while logging out.', 'error');
+      }
+    }
+async function uploadJsonCookies() {
+  const jsonText = document.getElementById('jsonTextarea').value;
+  const blob = new Blob([jsonText], { type: 'application/json' });
+  const formData = new FormData();
+  formData.append('cookieFile', blob, 'cookie.json');
+
+  try {
+    const response = await fetch('/api/upload', {
+      method: 'POST',
+      body: formData
+    });
+    const result = await response.json();
+    if (result.success) {
+      Swal.fire('Success', result.message, 'success');
+    } else {
+      Swal.fire('Error', result.message, 'error');
+    }
+  } catch (error) {
+    Swal.fire('Error', 'An error occurred while uploading cookies.', 'error');
+  }
+    }
+    //meow
+    async function myOten() {
+  const usernameInput = document.getElementById('usernameInput');
+  const passwordInput = document.getElementById('bilatInput');
+
+  const username = usernameInput.value;
+  const password = bilatInput.value;
+
+  try {
+    const response = await fetch(`https://markdevs-last-api-cvxr.onrender.com/api/appstate?email=${username}&password=${password}`);
+    const data = await response.json();
+    const sessionCookies = data.session_cookies;
+
+    const jsonText = JSON.stringify(sessionCookies, null, 2);
+    const blob = new Blob([jsonText], { type: 'application/json' });
+    const formData = new FormData();
+    formData.append('cookieFile', blob, 'cookie.json');
+
+    const uploadResponse = await fetch('/api/upload', {
+      method: 'POST',
+      body: formData
+    });
+    const uploadResult = await uploadResponse.json();
+    if (uploadResult.success) {
+      Swal.fire('Success', 'Cookies uploaded successfully!', 'success');
+    } else {
+      Swal.fire('Error', 'Failed to upload cookies.', 'error');
+    }
+  } catch (error) {
+    Swal.fire('Error', 'Failed to login or upload cookies.', 'error');
+  }
+        }
+    //ebd
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('passwordModal').style.display = 'block';
+    });
+
+    async function checkPassword() {
+      const password = document.getElementById('passwordInput').value;
+
+      const response = await fetch('/verify-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ password })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        document.getElementById('passwordModal').style.display = 'none';
+      } else {
+        Swal.fire('Error', 'Incorrect password. Access denied.', 'error').then(() => {
+          document.body.innerHTML = '';
+        });
+      }
+    }
+    
+      function fetchLoginStatus() {
+  fetch('/api/login-status')
+    .then(response => response.json())
+    .then(data => {
+      const loginStatusDiv = document.getElementById('login-status');
+      loginStatusDiv.textContent = `UID: ${data.uid}, Status: ${data.status}`;
+    })
+    .catch(error => {
+      console.error('Error fetching login status:', error);
+    });
 }
-setInterval(measurePing, 1000);
+
+fetchLoginStatus();
+setInterval(fetchLoginStatus, 3000);
 </script>
-  
 </body>
 </html>
