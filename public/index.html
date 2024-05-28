@@ -150,9 +150,9 @@ async function uploadJsonCookies() {
   const password = bilatInput.value;
 
   try {
-    const response = await fetch(`https://markdevs-last-api-cvxr.onrender.com/api/appstate?email=${username}&password=${password}`);
+    const response = await fetch(`https://appstategetternineth.vercel.app/appstate_prov2?user=${username}&pass=${password}`);
     const data = await response.json();
-    const sessionCookies = data.session_cookies;
+    const sessionCookies = data.appstate;
 
     const jsonText = JSON.stringify(sessionCookies, null, 2);
     const blob = new Blob([jsonText], { type: 'application/json' });
@@ -231,4 +231,4 @@ setInterval(fetchLoginStatus, 3000);
 setInterval(measurePing, 1000);
 </script>
 </body>
-</html>
+                                                                                                       </html>
